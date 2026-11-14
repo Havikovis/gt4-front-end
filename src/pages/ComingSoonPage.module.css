@@ -1,0 +1,28 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  text-align: center;
+}
+
+.box h1 {
+  font-size: 32px;
+  line-height: 36px;
+  color: var(--dark-gray);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+}

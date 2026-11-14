@@ -1,0 +1,51 @@
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border: 1px solid var(--light-gray-2);
+  color: var(--dark-gray-2);
+}
+
+.square {
+  min-width: 48px;
+  height: 48px;
+  padding: 0 14px;
+  border-radius: 4px;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.circle {
+  width: 31px;
+  height: 31px;
+  padding: 0;
+  border-radius: 50%;
+  border-color: transparent;
+}
+
+.square.selected {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--white);
+}
+
+.selected {
+  border: 2px solid var(--primary);
+}
+
+.circle.selected {
+  box-shadow: 0 0 0 2px var(--white) inset;
+}
+
+@media (max-width: 768px) {
+  .square {
+    font-size: 18px;
+  }
+}

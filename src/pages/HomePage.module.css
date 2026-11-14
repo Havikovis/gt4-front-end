@@ -1,0 +1,378 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 681px;
+  display: flex;
+  align-items: center;
+  background: var(--light-gray-3);
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 540px;
+}
+
+.heroTag {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--warning);
+}
+
+.heroText h1 {
+  font-size: 64px;
+  line-height: 66px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--dark-gray);
+}
+
+.heroText p {
+  font-size: 18px;
+  line-height: 34px;
+  color: var(--dark-gray-2);
+}
+
+.heroButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 40px;
+  margin-top: 16px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.heroButton:hover {
+  background: var(--tertiary);
+}
+
+.heroImages {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 64%;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 28%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 28%);
+}
+
+.heroImage,
+.heroImageActive {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.heroImage {
+  opacity: 0;
+}
+
+.heroImageActive {
+  opacity: 1;
+}
+
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  z-index: 2;
+  display: flex;
+  gap: 12px;
+  transform: translateX(-50%);
+}
+
+.dot,
+.dotActive {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--light-gray-2);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85);
+}
+
+.dotActive {
+  background: var(--primary);
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding-top: 64px;
+}
+
+.collections {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.collection {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  line-height: 0;
+}
+
+.collection img {
+  width: 100%;
+  height: auto;
+}
+
+.collectionBadge {
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 16px;
+  border-radius: 16px;
+  background: #e7ff86;
+  color: var(--dark-gray-2);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.collectionButton {
+  position: absolute;
+  left: 24px;
+  bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 40px;
+  border-radius: 8px;
+  background: var(--light-gray-3);
+  color: var(--primary);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.collectionButton:hover {
+  background: var(--white);
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: var(--dark-gray-2);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.categoryIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--primary);
+  box-shadow: 0 2px 8px rgba(31, 31, 31, 0.08);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.category:hover .categoryIcon {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.promo {
+  margin-top: 64px;
+  margin-bottom: -80px; /* o banner encosta no rodape, como no Figma */
+  background: var(--white);
+}
+
+.promoInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+  min-height: 553px;
+}
+
+.promoImage {
+  display: flex;
+  justify-content: center;
+}
+
+.promoImage img {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #e9e3ff 0%, #ffffff 100%);
+  object-fit: cover;
+}
+
+.promoText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.promoTag {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.promoText h2 {
+  font-size: 48px;
+  line-height: 50px;
+  font-weight: 700;
+  color: var(--dark-gray-2);
+}
+
+.promoText p {
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--dark-gray-3);
+}
+
+.promoButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 40px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.promoButton:hover {
+  background: var(--tertiary);
+}
+
+@media (max-width: 900px) {
+  .promoInner {
+    grid-template-columns: 1fr;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    gap: 24px;
+  }
+
+  .promoText h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 0;
+    flex-direction: column;
+    padding: 32px 0 0;
+  }
+
+  .heroText {
+    align-items: center;
+    max-width: none;
+    text-align: center;
+  }
+
+  .heroText h1 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  .heroText p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .heroImages {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    margin-top: 16px;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .dots {
+    bottom: 12px;
+  }
+
+  .collectionBadge {
+    top: 10px;
+    left: 14px;
+    height: 26px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .collectionButton {
+    left: 14px;
+    bottom: 12px;
+    height: 40px;
+    padding: 0 28px;
+  }
+
+  .sections {
+    gap: 40px;
+    padding-top: 32px;
+  }
+
+  .collections {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .categories {
+    gap: 16px 20px;
+  }
+
+  .categoryIcon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .categoryIcon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .category {
+    font-size: 14px;
+  }
+}
