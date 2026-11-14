@@ -78,7 +78,7 @@
 
 @media (max-width: 1000px) {
   .page {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 24px;
   }
 
@@ -106,5 +106,15 @@
 @media (max-width: 768px) {
   .page {
     padding-top: 24px;
+  }
+
+  .sortBox {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .sortBox select {
+    flex: 1;
+    min-width: 0;
   }
 }
